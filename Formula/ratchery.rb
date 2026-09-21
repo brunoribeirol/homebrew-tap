@@ -1,4 +1,4 @@
-class Ratchetry < Formula
+class Ratchery < Formula
   desc "Security-first, cost-aware workspace for Claude Code and Codex"
   homepage "https://github.com/brunoribeirol/ratchery"
   url "https://github.com/brunoribeirol/ratchery/releases/download/v1.1.0/ratchery-1.1.0.tar.gz"
