@@ -6,7 +6,6 @@ class Ratchery < Formula
   license "MIT"
 
   depends_on "python@3.14"
-  uses_from_macos "git"
 
   def install
     hidden = Dir[".*"]
