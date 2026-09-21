@@ -9,10 +9,12 @@ class Ratchery < Formula
   uses_from_macos "git"
 
   def install
-    hidden = Dir[".*"].reject { |path| %w[. ..].include?(File.basename(path)) }
+    hidden = Dir[".*"]
+    hidden.delete(".")
+    hidden.delete("..")
     libexec.install Dir["*"], *hidden
 
-    python = Formula["python@3.14"].opt_bin/"python3.14"
+    python = formula_opt_bin("python@3.14")/"python3.14"
     inreplace libexec/"bin/ratchery", "python3", python.to_s
     bin.install_symlink libexec/"bin/ratchery"
   end
